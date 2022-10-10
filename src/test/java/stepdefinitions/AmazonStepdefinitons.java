@@ -3,6 +3,7 @@ package stepdefinitions;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import pages.AmazonPage;
@@ -60,5 +61,37 @@ public class AmazonStepdefinitons {
         String arananKelime="iphone";
         String actualAramaSonucStr=amazonPage.aramaSonucElementi.getText();
         Assert.assertTrue(actualAramaSonucStr.contains(arananKelime));
+    }
+
+    @Then("kullanici {string} icin arama yapar")
+    public void kullaniciIcinAramaYapar(String arananKelime) {
+        amazonPage.aramaKutusu.sendKeys(arananKelime,Keys.ENTER);
+    }
+
+    @And("kullanici sonuclarin {string} icerdigini test eder")
+    public void kullaniciSonuclarinIcerdiginiTestEder(String arananKelimeninSonucu) {
+        String arananKelime=arananKelimeninSonucu;
+        String actualAramaSonucStr=amazonPage.aramaSonucElementi.getText();
+        Assert.assertTrue(actualAramaSonucStr.contains(arananKelime));
+    }
+
+    @Given("kullanici {string}anasayfasinda")
+    public void kullaniciAnasayfasinda(String arananUrl) {
+        Driver.getDriver().get(ConfigReader.getProperty(arananUrl));
+    }
+
+    @When("kullanici url'nin {string} icerdigini test eder")
+    public void kullaniciUrlNinIcerdiginiTestEder(String istenenUrl) {
+        String actualUrl=Driver.getDriver().getCurrentUrl(); // o sayfanin url'sini bize verir.
+        Assert.assertTrue(actualUrl.contains(istenenUrl));
+    }
+
+    @Then("kullanici {int} saniye bekler")
+    public void kullaniciSaniyeBekler(int beklemeSuresi) {
+        try {
+            Thread.sleep(beklemeSuresi*1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

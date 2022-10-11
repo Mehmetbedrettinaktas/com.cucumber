@@ -5,11 +5,11 @@ import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(
+@CucumberOptions( // bize JUnit'ten geliyor
         features = "src/test/resources/features",
-        glue = "stepdefinitions",
-        tags = "@mehmet or @aktas", //Ayni anda birden fazla tagi calistirmak istersek "@java or @nutella or @iphone" seklinde yapiliyor
-        dryRun = false
+        glue = "stepdefinitions",  // glue yapistirmak
+        tags = "@selo", //Ayni anda birden fazla tagi calistirmak istersek "@java or @nutella or @iphone" seklinde yapiliyor
+        dryRun = false  // kuru calistir   true koydugumuzda eksik step definitonlari veriyor.
 
 )
 

@@ -94,4 +94,10 @@ public class AmazonStepdefinitons {
             throw new RuntimeException(e);
         }
     }
+
+
+    @Given("kullanici {string} anasayfasina gider")
+    public void kullaniciAnasayfasinaGider(String arananUrl) {
+        Driver.getDriver().get(ConfigReader.getProperty("herrokuappUrl"));
+    }
 }

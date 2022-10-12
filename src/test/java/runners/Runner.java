@@ -8,8 +8,8 @@ import org.junit.runner.RunWith;
 @CucumberOptions( // bize JUnit'ten geliyor
         features = "src/test/resources/features",
         glue = "stepdefinitions",  // glue yapistirmak
-        tags = "@selo", //Ayni anda birden fazla tagi calistirmak istersek "@java or @nutella or @iphone" seklinde yapiliyor
-        dryRun = false  // kuru calistir   true koydugumuzda eksik step definitonlari veriyor.
+        tags = "@BRC", //Ayni anda birden fazla tagi calistirmak istersek "@java or @nutella or @iphone" seklinde yapiliyor
+        dryRun = true  // kuru calistir   true koydugumuzda eksik step definitonlari veriyor.
 
 )
 

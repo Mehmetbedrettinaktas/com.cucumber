@@ -1,13 +1,24 @@
-Feature:
+Feature: : US008 OdevBRC
 
-  Scenario Outline: TC11 kullanici gecersiz bilgilerle giris yapar
-    Given kullanici Blue RentaCar ana sayfasinda
-    Then Log in yazisina tiklar
-    And gecersiz username girer
-    And gecersiz password girer
-    And Login butonuna basar
-    Then sayfaya giris yapilamadigini kontrol eder
-    And kulllanici sayfayi kapatir
+  @BRC
+  Scenario Outline: : TC11 kullanici gecersiz bilgilerle giris yapar
+    Given kullanici "brcUrl" ana sayfasinda
+    Then Login yazisina tiklar
+    And "<gecersizEmail>" username girer
+    And "<gecersizPass>" password girer
+    And brc Login butonuna basar
+    Then brc sayfasina giris yapilamadigini kontrol eder
+    And kullanici 3 saniye bekler
 
- # Kullanici adi  Manager5@gmail.com  Manager6@gmail.com  Manager7@gmail.com  Manager8@gmail.com  Manager9@gmail.com
-  #Password  Manager5!  Manager6!  Manager7!  Manager8!  Manager9!
+
+    Examples: :
+  | gecersizEmail   | gecersizPass |
+  |a@gmail.com      |    12346|
+  |b@gmail.com      |    13246|
+  |c@gmail.com      |    78974|
+  |d@gmail.com      |    78564|
+  |e@gmail.com      |    41454|
+
+    Scenario: sayfayi kapatir
+      And  kullanici sayfayi kapatir
+

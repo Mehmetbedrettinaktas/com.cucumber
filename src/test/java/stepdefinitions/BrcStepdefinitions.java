@@ -43,5 +43,24 @@ public class BrcStepdefinitions {
 
     }
 
+    @Then("{string} username girer")
+    public void username_girer(String string) {
+
+
+    }
+    @Then("{string} password girer")
+    public void password_girer(String string) {
+
+    }
+    @Then("brc Login butonuna basar")
+    public void brc_login_butonuna_basar() {
+
+    }
+    @Then("brc sayfasina giris yapilamadigini kontrol eder")
+    public void brc_sayfasina_giris_yapilamadigini_kontrol_eder() {
+
+    }
+
+
 
 }

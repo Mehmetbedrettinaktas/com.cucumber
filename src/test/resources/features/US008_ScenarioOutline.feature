@@ -1,4 +1,4 @@
-@selo
+
 Feature:US008_ScenarioOutline
 
 

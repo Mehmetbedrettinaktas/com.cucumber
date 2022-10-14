@@ -1,6 +1,6 @@
 Feature: : US008 OdevBRC
 
-  @BRC
+
   Scenario Outline: : TC11 kullanici gecersiz bilgilerle giris yapar
     Given kullanici "brcUrl" ana sayfasinda
     Then Login yazisina tiklar

@@ -6,10 +6,12 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions( // bize JUnit'ten geliyor
+        plugin={"html:target/cucumber-reports.html",  "json:target/json-reports/cucumber.json",
+        "junit:target/xml-report/cucumber.xml" },
         features = "src/test/resources/features",
         glue = "stepdefinitions",  // glue yapistirmak
-        tags = "@BRC", //Ayni anda birden fazla tagi calistirmak istersek "@java or @nutella or @iphone" seklinde yapiliyor
-        dryRun = true  // kuru calistir   true koydugumuzda eksik step definitonlari veriyor.
+        tags = "@mehmet", //Ayni anda birden fazla tagi calistirmak istersek "@java or @nutella or @iphone" seklinde yapiliyor
+        dryRun = false  // kuru calistir   true koydugumuzda eksik step definitonlari veriyor.
 
 )
 

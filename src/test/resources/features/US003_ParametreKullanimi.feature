@@ -1,4 +1,4 @@
-@mehmet
+
 Feature: US003 parametre kullanimi
 
   Background: ortak adim

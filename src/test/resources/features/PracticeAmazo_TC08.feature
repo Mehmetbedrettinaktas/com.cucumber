@@ -1,6 +1,6 @@
-@practice
+
 Feature: Amazon Practice
-  @practiceTC01
+
   Scenario: Amazon Sign in Test
 
 

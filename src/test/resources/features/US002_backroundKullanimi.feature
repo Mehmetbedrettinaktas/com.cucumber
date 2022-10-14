@@ -1,4 +1,4 @@
-@Background
+
 Feature: US001 Backround Kullanimi
 
   Background: Ortak Adimlar

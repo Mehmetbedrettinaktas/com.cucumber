@@ -1,6 +1,6 @@
 # feature ustune konulan @ tum caseleri calistirir eger ozellestirmezsek
 
-@mehmet
+
 Feature: TC Verify Test Cases
 
   Scenario: TC_07_Test_Cases

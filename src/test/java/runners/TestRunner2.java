@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
                 "junit:target/xml-report/cucumber2.xml" },
         features = "src/test/resources/features",
         glue = "stepdefinitions",  // glue yapistirmak
-        tags = "@web", //Ayni anda birden fazla tagi calistirmak istersek "@java or @nutella or @iphone" seklinde yapiliyor
+        tags = "@automaion", //Ayni anda birden fazla tagi calistirmak istersek "@java or @nutella or @iphone" seklinde yapiliyor
         dryRun = false)
 public class TestRunner2 {
 }
